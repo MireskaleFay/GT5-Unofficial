@@ -185,6 +185,24 @@ public class FormingPressRecipes implements Runnable {
             .duration(5 * SECONDS)
             .eut(16)
             .addTo(formingPressRecipes);
+
+        GTValues.RA.stdBuilder()
+            .itemInputs(
+                GTOreDictUnificator.get(OrePrefixes.dust, Materials.SiliconSG, 1),
+                ItemList.Shape_Mold_Plate.get(0))
+            .itemOutputs(ItemList.Raw_Crude_Si_Wafer.get(1))
+            .duration(5 * SECONDS)
+            .eut(16)
+            .addTo(formingPressRecipes);
+
+        GTValues.RA.stdBuilder()
+            .itemInputs(
+                GTOreDictUnificator.get(OrePrefixes.dust, Materials.Diamond, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireFine, Materials.Steel, 16))
+            .itemOutputs(ItemList.Diamond_Infused_Wire_Saw.get(16))
+            .duration(5 * SECONDS)
+            .eut(16)
+            .addTo(formingPressRecipes);
         // Bartworks Glass Tube
         GTValues.RA.stdBuilder()
             .itemInputs(
